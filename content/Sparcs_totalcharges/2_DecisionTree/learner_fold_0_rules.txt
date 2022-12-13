@@ -1,0 +1,16 @@
+if (predictions <= 174813.617) and (Total Costs <= 34265.955) and (Total Costs <= 13644.43) then response: 19222.608 | based on 12,353 samples
+
+if (predictions <= 174813.617) and (Total Costs <= 34265.955) and (Total Costs > 13644.43) then response: 60977.95 | based on 3,866 samples
+
+if (predictions <= 174813.617) and (Total Costs > 34265.955) and (Total Costs <= 78545.273) then response: 140159.431 | based on 1,149 samples
+
+if (predictions <= 174813.617) and (Total Costs > 34265.955) and (Total Costs > 78545.273) then response: 303126.983 | based on 257 samples
+
+if (predictions > 174813.617) and (predictions <= 723160.625) and (Total Costs <= 359847.766) then response: 668385.135 | based on 46 samples
+
+if (predictions > 174813.617) and (predictions <= 723160.625) and (Total Costs > 359847.766) then response: 1423989.064 | based on 14 samples
+
+if (predictions > 174813.617) and (predictions > 723160.625) and (Zip Code - 3 digits > 30.5) then response: 4410671.46 | based on 1 samples
+
+if (predictions > 174813.617) and (predictions > 723160.625) and (Zip Code - 3 digits <= 30.5) then response: 4281817.08 | based on 1 samples
+

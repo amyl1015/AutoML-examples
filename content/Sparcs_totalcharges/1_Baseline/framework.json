@@ -1,0 +1,89 @@
+{
+    "uid": "43bd773d-efc0-42c0-bf6e-9fc0b193638d",
+    "name": "1_Baseline",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Discharge Year"
+            ],
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Discharge Year": [
+                        "remove_column"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.2",
+            "algorithm_name": "Baseline Regressor",
+            "algorithm_short_name": "Baseline",
+            "uid": "1a5aeef5-02cd-4edd-89fe-7d880a30574f",
+            "params": {
+                "model_type": "Baseline",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Discharge Year": [
+                    "remove_column"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "Sparcs_totalcharges/X.data",
+            "y_path": "Sparcs_totalcharges/y.data",
+            "results_path": "Sparcs_totalcharges"
+        },
+        "learner": {
+            "model_type": "Baseline",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "1_Baseline",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_Baseline/learner_fold_0.baseline"
+    ],
+    "predictions_fname": "1_Baseline/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 72381.65322864988,
+    "train_time": 1.3552768230438232,
+    "is_stacked": false
+}

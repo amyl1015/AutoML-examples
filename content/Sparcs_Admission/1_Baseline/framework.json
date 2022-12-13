@@ -1,0 +1,102 @@
+{
+    "uid": "0c3dfb50-815e-47dd-bcd8-8b85da0031ad",
+    "name": "1_Baseline",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Discharge Year"
+            ],
+            "categorical_y": {
+                "Elective": 0,
+                "Emergency": 1,
+                "Newborn": 2,
+                "Not Available": 3,
+                "Trauma": 4,
+                "Urgent": 5
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Discharge Year": [
+                        "remove_column"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.2",
+            "algorithm_name": "Baseline Classifier",
+            "algorithm_short_name": "Baseline",
+            "uid": "fa0ed411-51cc-41e9-b676-abb7393bfd10",
+            "params": {
+                "model_type": "Baseline",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "num_class": 6,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Discharge Year": [
+                    "remove_column"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "Sparcs_Admission/X.data",
+            "y_path": "Sparcs_Admission/y.data",
+            "results_path": "Sparcs_Admission"
+        },
+        "learner": {
+            "model_type": "Baseline",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "num_class": 6,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "1_Baseline",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_Baseline/learner_fold_0.baseline"
+    ],
+    "predictions_fname": "1_Baseline/predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 1.0470506282623717,
+    "train_time": 1.874967336654663,
+    "is_stacked": false
+}
